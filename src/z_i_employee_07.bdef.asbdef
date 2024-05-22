@@ -1,0 +1,14 @@
+managed implementation in class zbp_i_employee_07 unique;
+with draft;
+
+define behavior for Z_I_EMPLOYEE_07 alias Employee
+persistent table zemployee_07
+draft table zemployee_07_d
+lock master
+total etag lchg_date_time
+etag master lchg_date_time
+{
+  field ( readonly, numbering : managed ) e_number; create;
+  update;
+  delete;
+}
